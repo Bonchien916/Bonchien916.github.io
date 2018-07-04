@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="ps 用于查看服务器进程语法：ps 选项  例：ps -ef | grep xxx选项：             -e 列出全部             -f 显示全部列（全字段）字段解释：    UID PID PPID C STIME TTY CMD     执行该进程的用户ID 进程ID 该进程的调用者ID CPU占用率 启动时间 终端设备 该进程名称或路径     top 可以实时动态的">
+<meta name="description" content="通过命令行重启Linux  #reboot 快速删除光标前/后的内容  快捷键 前：ctrl+u 后 ctrl+k 如何删除/temp目录下所有A开头的  #rm -f /temp/A* 备份/etc/passwd 到 /temp目录  #cp  /etc/passwd /temp/ 如何查看系统中最后创建的3个用户  用户创建信息在/etc/passwd中 #tail -3 /etc/pass">
 <meta name="keywords" content="运维">
 <meta property="og:type" content="article">
-<meta property="og:title" content="运维入门第三天">
-<meta property="og:url" content="http://yoursite.com/2018/07/03/运维入门第三天/index.html">
+<meta property="og:title" content="Linux入门练习">
+<meta property="og:url" content="http://yoursite.com/2018/07/04/Linux入门练习/index.html">
 <meta property="og:site_name" content="Bonchien">
-<meta property="og:description" content="ps 用于查看服务器进程语法：ps 选项  例：ps -ef | grep xxx选项：             -e 列出全部             -f 显示全部列（全字段）字段解释：    UID PID PPID C STIME TTY CMD     执行该进程的用户ID 进程ID 该进程的调用者ID CPU占用率 启动时间 终端设备 该进程名称或路径     top 可以实时动态的">
+<meta property="og:description" content="通过命令行重启Linux  #reboot 快速删除光标前/后的内容  快捷键 前：ctrl+u 后 ctrl+k 如何删除/temp目录下所有A开头的  #rm -f /temp/A* 备份/etc/passwd 到 /temp目录  #cp  /etc/passwd /temp/ 如何查看系统中最后创建的3个用户  用户创建信息在/etc/passwd中 #tail -3 /etc/pass">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-04T01:03:29.633Z">
+<meta property="og:updated_time" content="2018-07-04T01:03:12.889Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="运维入门第三天">
-<meta name="twitter:description" content="ps 用于查看服务器进程语法：ps 选项  例：ps -ef | grep xxx选项：             -e 列出全部             -f 显示全部列（全字段）字段解释：    UID PID PPID C STIME TTY CMD     执行该进程的用户ID 进程ID 该进程的调用者ID CPU占用率 启动时间 终端设备 该进程名称或路径     top 可以实时动态的">
+<meta name="twitter:title" content="Linux入门练习">
+<meta name="twitter:description" content="通过命令行重启Linux  #reboot 快速删除光标前/后的内容  快捷键 前：ctrl+u 后 ctrl+k 如何删除/temp目录下所有A开头的  #rm -f /temp/A* 备份/etc/passwd 到 /temp目录  #cp  /etc/passwd /temp/ 如何查看系统中最后创建的3个用户  用户创建信息在/etc/passwd中 #tail -3 /etc/pass">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/03/运维入门第三天/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/04/Linux入门练习/"/>
 
 
 
 
 
-  <title>运维入门第三天 | Bonchien</title>
+  <title>Linux入门练习 | Bonchien</title>
   
 
 
@@ -233,7 +233,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/03/运维入门第三天/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/Linux入门练习/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -250,7 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">运维入门第三天</h1>
+          <h1 class="post-title" itemprop="name headline">Linux入门练习</h1>
         
 
         <div class="post-meta">
@@ -262,8 +262,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-03T15:13:20+08:00">
-                2018-07-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-04T09:02:44+08:00">
+                2018-07-04
               </time>
             
 
@@ -301,81 +301,52 @@
 
       
         <blockquote>
-<p><strong>ps</strong> 用于查看服务器进程<br>语法：<strong>ps 选项</strong></p>
+<p>通过命令行重启Linux</p>
 </blockquote>
-<p>例：ps -ef | grep xxx<br>选项：<br>             -e 列出全部<br>             -f 显示全部列（全字段）<br>字段解释：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">UID</th>
-<th style="text-align:center">PID</th>
-<th style="text-align:center">PPID</th>
-<th style="text-align:center">C</th>
-<th style="text-align:center">STIME</th>
-<th style="text-align:center">TTY</th>
-<th style="text-align:center">CMD</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">执行该进程的用户ID</td>
-<td style="text-align:center">进程ID</td>
-<td style="text-align:center">该进程的调用者ID</td>
-<td style="text-align:center">CPU占用率</td>
-<td style="text-align:center">启动时间</td>
-<td style="text-align:center">终端设备</td>
-<td style="text-align:center">该进程名称或路径</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><strong>top</strong> 可以实时动态的查看系统运行情况<br>语法：<strong>top 选项</strong></p>
+<h3 id="reboot"><a href="#reboot" class="headerlink" title="#reboot"></a>#reboot</h3><blockquote>
+<p>快速删除光标前/后的内容</p>
 </blockquote>
-<p>字段解释：<br>|   PID  |   USER|    PR |   VIRT   | RES | SHR |S |<br>| :——:| :——: | :——:| :——: | :——: | :——: |:——: |<br>|   进程ID | 该进程用户|  优先级 |  虚拟内存  | 常驻内存  | 共享内存 |状态 |<br>运行时可以使用快捷键<br>M：将结果按照内存（MEN）从高到低显示<br>P：CPU使用率从高到低<br>1：是否展示CPU详细信息</p>
-<blockquote>
-<p><strong>du</strong> 查看目录真实大小<br>语法：<strong>du 选项 文件</strong></p>
+<h3 id="快捷键-前：ctrl-u-后-ctrl-k"><a href="#快捷键-前：ctrl-u-后-ctrl-k" class="headerlink" title="快捷键 前：ctrl+u 后 ctrl+k"></a>快捷键 前：ctrl+u 后 ctrl+k</h3><blockquote>
+<p>如何删除/temp目录下所有A开头的</p>
 </blockquote>
-<p>选项：<br>-s：summaries只显示汇总大小<br>-h：高可读性显示</p>
-<blockquote>
-<p><strong>find</strong> 查找文件<br>语法：<strong>find 路径范围 选项 选项的值</strong></p>
+<h3 id="rm-f-temp-A"><a href="#rm-f-temp-A" class="headerlink" title="#rm -f /temp/A*"></a>#rm -f /temp/A*</h3><blockquote>
+<p>备份/etc/passwd 到 /temp目录</p>
 </blockquote>
-<p>选项：<br>-name：按照文档名称模糊搜索<br>-type：文档类型 “f”表示文件 “d”表示文件夹<br>例：find /etc -name *.conf   表示搜索etc目录下后缀为conf的文件</p>
-<blockquote>
-<p><strong>service</strong> 启动服务<br>语法：<strong>service服务 start/stop/restart</strong></p>
+<h3 id="cp-etc-passwd-temp"><a href="#cp-etc-passwd-temp" class="headerlink" title="#cp  /etc/passwd /temp/"></a>#cp  /etc/passwd /temp/</h3><blockquote>
+<p>如何查看系统中最后创建的3个用户</p>
 </blockquote>
-<p>例：service mysql start 启动mysql服务<br>可以通过ps -ef | grep mysql 来查看服务是否启动成功</p>
-<blockquote>
-<p><strong>kill</strong> 杀死进程<br>语法：<strong>kill 进程ID</strong></p>
+<p>用户创建信息在/etc/passwd中</p>
+<h3 id="tail-3-etc-passwd"><a href="#tail-3-etc-passwd" class="headerlink" title="#tail -3 /etc/passwd"></a>#tail -3 /etc/passwd</h3><blockquote>
+<p>统计当前有多少用户</p>
 </blockquote>
-<p>这样有时候会麻烦，因为首先要知道知道进程ID，所以还有下面一种命令<br>语法：<strong>killall 进程名称</strong></p>
-<blockquote>
-<p><strong>ifconfig</strong> 用于操作网卡相关指令</p>
+<h3 id="wc-l-etc-passwd"><a href="#wc-l-etc-passwd" class="headerlink" title="#wc -l /etc/passwd"></a>#wc -l /etc/passwd</h3><blockquote>
+<p>如何创建/temp/text.conf文件</p>
 </blockquote>
-<p>inet addr是网卡的ip地址</p>
-<blockquote>
-<p><strong>reboot</strong> 重启linux</p>
+<h3 id="touch-temp-text-conf"><a href="#touch-temp-text-conf" class="headerlink" title="#touch /temp/text.conf"></a>#touch /temp/text.conf</h3><blockquote>
+<p>通过vim打开/temp/text.conf</p>
 </blockquote>
-<blockquote>
-<p><strong>shutdown</strong> 关机（慎用）<br>语法：<strong>shutdown -h now（root用户使用）</strong> 或者<strong>shutdown -h 15:30 （具体时间）</strong></p>
+<h3 id="vim-temp-text-conf"><a href="#vim-temp-text-conf" class="headerlink" title="#vim /temp/text.conf"></a>#vim /temp/text.conf</h3><blockquote>
+<p>如何查看/etc/passwd的头三行和尾三行</p>
 </blockquote>
-<p>那么如何取消关机<br>在centos7.X之前：ctrl+c<br>在centos7.X之后：shutdown -c</p>
-<p>除了shutdown，关机指令还有init 0 、halt、poweroff</p>
-<blockquote>
-<p><strong>uptime</strong> 输出持续在线时间</p>
+<h3 id="head-3-etc-passwd"><a href="#head-3-etc-passwd" class="headerlink" title="#head -3 /etc/passwd"></a>#head -3 /etc/passwd</h3><h3 id="tail-3-etc-passwd-1"><a href="#tail-3-etc-passwd-1" class="headerlink" title="#tail -3 /etc/passwd"></a>#tail -3 /etc/passwd</h3><blockquote>
+<p>如何一次性创建出/text/1/2/3/4</p>
 </blockquote>
-<p>参数说明：系统当前时间 已运行时间 总连接数 系统平均负载</p>
-<blockquote>
-<p><strong>uname</strong> 计算机系统相关信息<br>语法： <strong>uname 选项</strong></p>
+<h3 id="mkdir-p-text-1-2-3-4"><a href="#mkdir-p-text-1-2-3-4" class="headerlink" title="#mkdir -p /text/1/2/3/4"></a>#mkdir -p /text/1/2/3/4</h3><blockquote>
+<p>快速到当前账户的家目录</p>
 </blockquote>
-<p>例：uname -a （获取完整信息）<br>参数说明：<br>类型 主机名 内核版本 发布时间 开源计划</p>
-<blockquote>
-<p><strong>netstat</strong> 查看网络连接状态<br>一般用法：<strong>netstat -tnlp</strong></p>
+<h3 id="cd"><a href="#cd" class="headerlink" title="#cd ~"></a>#cd ~</h3><h3 id="cd-1"><a href="#cd-1" class="headerlink" title="#cd"></a>#cd</h3><blockquote>
+<p>查看/etc所占磁盘空间</p>
 </blockquote>
-<p>选项说明：<br>-t：只列出tcp协议的连接<br>-n：将地址从字母组合转化成ip、协议转化成ip<br>-l：state状态列中值为LISTEN（监听）的连接<br>-p：显示对应的PID和进程名称</p>
-<blockquote>
-<p><strong>man</strong> 手册<br>语法：man  命令</p>
+<h3 id="du-sh-etc"><a href="#du-sh-etc" class="headerlink" title="#du -sh /etc"></a>#du -sh /etc</h3><blockquote>
+<p>删除/tmp下所有文件</p>
 </blockquote>
-
+<h3 id="rm-rf-tmp"><a href="#rm-rf-tmp" class="headerlink" title="#rm -rf /tmp/*"></a>#rm -rf /tmp/*</h3><blockquote>
+<p>尝试启动apache服务，并检查是否启动成功</p>
+</blockquote>
+<h3 id="service-httpd-start"><a href="#service-httpd-start" class="headerlink" title="#service httpd start"></a>#service httpd start</h3><h3 id="ps-ef-grep-httpd"><a href="#ps-ef-grep-httpd" class="headerlink" title="#ps -ef | grep httpd"></a>#ps -ef | grep httpd</h3><blockquote>
+<p>杀死apache进程</p>
+</blockquote>
+<h3 id="killall-httpd"><a href="#killall-httpd" class="headerlink" title="#killall httpd"></a>#killall httpd</h3>
       
     </div>
     
@@ -405,8 +376,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/29/运维入门第二天/" rel="next" title="运维入门第二天">
-                <i class="fa fa-chevron-left"></i> 运维入门第二天
+              <a href="/2018/07/03/运维入门第三天/" rel="next" title="运维入门第三天">
+                <i class="fa fa-chevron-left"></i> 运维入门第三天
               </a>
             
           </div>
@@ -414,10 +385,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/04/Linux入门练习/" rel="prev" title="Linux入门练习">
-                Linux入门练习 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -469,8 +436,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -521,6 +497,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#reboot"><span class="nav-number">1.</span> <span class="nav-text">#reboot</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快捷键-前：ctrl-u-后-ctrl-k"><span class="nav-number">2.</span> <span class="nav-text">快捷键 前：ctrl+u 后 ctrl+k</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rm-f-temp-A"><span class="nav-number">3.</span> <span class="nav-text">#rm -f /temp/A*</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cp-etc-passwd-temp"><span class="nav-number">4.</span> <span class="nav-text">#cp  /etc/passwd /temp/</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tail-3-etc-passwd"><span class="nav-number">5.</span> <span class="nav-text">#tail -3 /etc/passwd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#wc-l-etc-passwd"><span class="nav-number">6.</span> <span class="nav-text">#wc -l /etc/passwd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#touch-temp-text-conf"><span class="nav-number">7.</span> <span class="nav-text">#touch /temp/text.conf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vim-temp-text-conf"><span class="nav-number">8.</span> <span class="nav-text">#vim /temp/text.conf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#head-3-etc-passwd"><span class="nav-number">9.</span> <span class="nav-text">#head -3 /etc/passwd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tail-3-etc-passwd-1"><span class="nav-number">10.</span> <span class="nav-text">#tail -3 /etc/passwd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mkdir-p-text-1-2-3-4"><span class="nav-number">11.</span> <span class="nav-text">#mkdir -p /text/1/2/3/4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cd"><span class="nav-number">12.</span> <span class="nav-text">#cd ~</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cd-1"><span class="nav-number">13.</span> <span class="nav-text">#cd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#du-sh-etc"><span class="nav-number">14.</span> <span class="nav-text">#du -sh /etc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rm-rf-tmp"><span class="nav-number">15.</span> <span class="nav-text">#rm -rf /tmp/*</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#service-httpd-start"><span class="nav-number">16.</span> <span class="nav-text">#service httpd start</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ps-ef-grep-httpd"><span class="nav-number">17.</span> <span class="nav-text">#ps -ef | grep httpd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#killall-httpd"><span class="nav-number">18.</span> <span class="nav-text">#killall httpd</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
