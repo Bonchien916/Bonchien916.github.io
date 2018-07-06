@@ -229,6 +229,157 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/06/运维入门第四天-crontab计划任务/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Bonchien">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/06/运维入门第四天-crontab计划任务/" itemprop="url">运维入门第四天-crontab计划任务</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-06T19:26:26+08:00">
+                2018-07-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p><strong>cron/crontab 计划任务</strong><br>指定时间点执行任务</p>
+</blockquote>
+<p>语法 crontab 选项<br>常用选项：<br>-l （list）列出指定用户的计划任务列表<br>-e（edit）编辑指定用户的计划任务列表<br>-u（user）指定的用户名，默认当前用户<br>-r（remove）删除指定用户的计划任务列表</p>
+<p>计划任务以行为单位<br>分 时 日 月 周 计划任务</p>
+<p>例：在0点0分执行reboot<br>0 0 <em> </em> * reboot</p>
+<p>取值范围：<br>分：0~59<br>时：0~23<br>日：1~31<br>月：1~12<br>周：0~6</p>
+<p>四个符号：</p>
+<ul>
+<li>*表示取值范围中的每个数字</li>
+<li>-连续区间，例：表达1~7则用1-7</li>
+<li>/每多少个，例：每10分钟1次，则在分的位置写*/10</li>
+<li>，多个取值，例：在1、2、6点执行，则在时的位置1，2，6</li>
+</ul>
+<blockquote>
+<p><strong>问题与测试</strong></p>
+</blockquote>
+<p><code>1、每月1、10、22日4：45重启network服务</code></p>
+<p>45      4      1,10,22     <em>       </em>      service network restart</p>
+<p><code>2、每周六、日的1：10重启network</code></p>
+<p>10     1       <em>       </em>       6,0      service network restart</p>
+<p><code>3、每天的18:00到23:00间隔半小时重启network服务</code></p>
+<p>*<em>/30    18-23    </em>    <em>     </em>    service network restart</p>
+<p><code>4、每隔两天的上午8点到11点的第三和第十五分钟执行重启</code></p>
+<p>3,15      8-11    <em>/2    </em>    *    reboot</p>
+<p><code>测试：每1分钟往root家目录中的RT.txt中输入当前时间(追加)</code></p>
+<p><em>/1     </em>    <em>    </em>    *    date +”%F %T” &gt;&gt; /root/RT.txt </p>
+<blockquote>
+<p><strong>contab权限问题</strong></p>
+</blockquote>
+<p>超级管理员可以通过配置文件来设置某些用户不允许设置计划任务<br>配置文件位置： /etc/cron.deny（黑名单）写用户名，一行一个</p>
+<p>还有一个配置文件/etc/cron.allow（白名单）优先级高于黑名单</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/04/上海交通大学公开课-数学之旅笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1078,7 +1229,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
