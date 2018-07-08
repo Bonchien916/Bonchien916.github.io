@@ -79,18 +79,24 @@
 
 
 
-<meta name="description" content="通过命令行重启Linux  #reboot 快速删除光标前/后的内容  快捷键 前：ctrl+u 后 ctrl+k 如何删除/temp目录下所有A开头的  #rm -f /temp/A* 备份/etc/passwd 到 /temp目录  #cp  /etc/passwd /temp/ 如何查看系统中最后创建的3个用户  用户创建信息在/etc/passwd中 #tail -3 /etc/pass">
+<meta name="description" content="1、认识Linux基本目录  bin             二进制文件（几乎所有用户命令），皆可运行boot            Linux启动时用到的一些文件dev             外接设备，需要挂载使用，常用的是挂载光驱mount /dev/cdrom /mntlib                系统使用的函数库，比较重要的目录为/lib/moduleslost+found">
 <meta name="keywords" content="运维">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux入门练习">
-<meta property="og:url" content="https://bonchien916.github.io/2018/07/04/Linux入门练习/index.html">
+<meta property="og:title" content="运维入门第一天-基本命令">
+<meta property="og:url" content="https://bonchien916.github.io/2018/06/28/运维入门第一天-基本命令/index.html">
 <meta property="og:site_name" content="Bonchien博客">
-<meta property="og:description" content="通过命令行重启Linux  #reboot 快速删除光标前/后的内容  快捷键 前：ctrl+u 后 ctrl+k 如何删除/temp目录下所有A开头的  #rm -f /temp/A* 备份/etc/passwd 到 /temp目录  #cp  /etc/passwd /temp/ 如何查看系统中最后创建的3个用户  用户创建信息在/etc/passwd中 #tail -3 /etc/pass">
+<meta property="og:description" content="1、认识Linux基本目录  bin             二进制文件（几乎所有用户命令），皆可运行boot            Linux启动时用到的一些文件dev             外接设备，需要挂载使用，常用的是挂载光驱mount /dev/cdrom /mntlib                系统使用的函数库，比较重要的目录为/lib/moduleslost+found">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-04T01:03:12.889Z">
+<meta property="og:image" content="https://bonchien916.github.io/2018/06/28/运维入门第一天-基本命令/运维入门第一天/1.png">
+<meta property="og:image" content="https://bonchien916.github.io/2018/06/28/运维入门第一天-基本命令/运维入门第一天/2.png">
+<meta property="og:image" content="https://bonchien916.github.io/2018/06/28/运维入门第一天-基本命令/运维入门第一天/3.png">
+<meta property="og:image" content="https://bonchien916.github.io/2018/06/28/运维入门第一天-基本命令/运维入门第一天/4.png">
+<meta property="og:image" content="https://bonchien916.github.io/2018/06/28/运维入门第一天-基本命令/运维入门第一天/5.png">
+<meta property="og:updated_time" content="2018-07-08T13:39:26.327Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux入门练习">
-<meta name="twitter:description" content="通过命令行重启Linux  #reboot 快速删除光标前/后的内容  快捷键 前：ctrl+u 后 ctrl+k 如何删除/temp目录下所有A开头的  #rm -f /temp/A* 备份/etc/passwd 到 /temp目录  #cp  /etc/passwd /temp/ 如何查看系统中最后创建的3个用户  用户创建信息在/etc/passwd中 #tail -3 /etc/pass">
+<meta name="twitter:title" content="运维入门第一天-基本命令">
+<meta name="twitter:description" content="1、认识Linux基本目录  bin             二进制文件（几乎所有用户命令），皆可运行boot            Linux启动时用到的一些文件dev             外接设备，需要挂载使用，常用的是挂载光驱mount /dev/cdrom /mntlib                系统使用的函数库，比较重要的目录为/lib/moduleslost+found">
+<meta name="twitter:image" content="https://bonchien916.github.io/2018/06/28/运维入门第一天-基本命令/运维入门第一天/1.png">
 
 
 
@@ -120,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="https://bonchien916.github.io/2018/07/04/Linux入门练习/"/>
+  <link rel="canonical" href="https://bonchien916.github.io/2018/06/28/运维入门第一天-基本命令/"/>
 
 
 
 
 
-  <title>Linux入门练习 | Bonchien博客</title>
+  <title>运维入门第一天-基本命令 | Bonchien博客</title>
   
 
 
@@ -233,7 +239,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://bonchien916.github.io/2018/07/04/Linux入门练习/">
+    <link itemprop="mainEntityOfPage" href="https://bonchien916.github.io/2018/06/28/运维入门第一天-基本命令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Bonchien">
@@ -250,7 +256,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Linux入门练习</h1>
+          <h1 class="post-title" itemprop="name headline">运维入门第一天-基本命令</h1>
         
 
         <div class="post-meta">
@@ -262,8 +268,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-04T09:02:44+08:00">
-                2018-07-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-28T15:19:43+08:00">
+                2018-06-28
               </time>
             
 
@@ -301,52 +307,37 @@
 
       
         <blockquote>
-<p>通过命令行重启Linux</p>
+<p>1、认识<strong>Linux基本目录</strong><br><img src="/2018/06/28/运维入门第一天-基本命令/运维入门第一天/1.png" alt=""></p>
 </blockquote>
-<h3 id="reboot"><a href="#reboot" class="headerlink" title="#reboot"></a>#reboot</h3><blockquote>
-<p>快速删除光标前/后的内容</p>
+<p>bin             二进制文件（几乎所有用户命令），皆可运行<br>boot            Linux启动时用到的一些文件<br>dev             外接设备，需要挂载使用，常用的是挂载光驱mount /dev/cdrom /mnt<br>lib                系统使用的函数库，比较重要的目录为/lib/modules<br>lost+found        系统异常产生错误时，会将一些遗失的片段放置于此目录下<br>mnt                光盘默认挂载点<br>srv                服务启动之后需要访问的数据目录，如www服务需要访问的网页数据存放在/srv/www内<br>etc             配置文件<br>home             除了root用户以外的其他用户的home目录<br>proc             Linux运行时的进程<br>root             root用户的Home<br>sbin             super二进制文件，可运行，前提是有super权限的用户<br>temp            系统运行时产生的临时文件，用完会自动清理<br>usr             用户自己安装的软件<br>var                放置系统执行过程中经常变化的文件，如随时更改的程序/系统的日志文件/var/log，/var/log/message</p>
+<blockquote>
+<p>2、<strong>Linux基本命令</strong></p>
 </blockquote>
-<h3 id="快捷键-前：ctrl-u-后-ctrl-k"><a href="#快捷键-前：ctrl-u-后-ctrl-k" class="headerlink" title="快捷键 前：ctrl+u 后 ctrl+k"></a>快捷键 前：ctrl+u 后 ctrl+k</h3><blockquote>
-<p>如何删除/temp目录下所有A开头的</p>
-</blockquote>
-<h3 id="rm-f-temp-A"><a href="#rm-f-temp-A" class="headerlink" title="#rm -f /temp/A*"></a>#rm -f /temp/A*</h3><blockquote>
-<p>备份/etc/passwd 到 /temp目录</p>
-</blockquote>
-<h3 id="cp-etc-passwd-temp"><a href="#cp-etc-passwd-temp" class="headerlink" title="#cp  /etc/passwd /temp/"></a>#cp  /etc/passwd /temp/</h3><blockquote>
-<p>如何查看系统中最后创建的3个用户</p>
-</blockquote>
-<p>用户创建信息在/etc/passwd中</p>
-<h3 id="tail-3-etc-passwd"><a href="#tail-3-etc-passwd" class="headerlink" title="#tail -3 /etc/passwd"></a>#tail -3 /etc/passwd</h3><blockquote>
-<p>统计当前有多少用户</p>
-</blockquote>
-<h3 id="wc-l-etc-passwd"><a href="#wc-l-etc-passwd" class="headerlink" title="#wc -l /etc/passwd"></a>#wc -l /etc/passwd</h3><blockquote>
-<p>如何创建/temp/text.conf文件</p>
-</blockquote>
-<h3 id="touch-temp-text-conf"><a href="#touch-temp-text-conf" class="headerlink" title="#touch /temp/text.conf"></a>#touch /temp/text.conf</h3><blockquote>
-<p>通过vim打开/temp/text.conf</p>
-</blockquote>
-<h3 id="vim-temp-text-conf"><a href="#vim-temp-text-conf" class="headerlink" title="#vim /temp/text.conf"></a>#vim /temp/text.conf</h3><blockquote>
-<p>如何查看/etc/passwd的头三行和尾三行</p>
-</blockquote>
-<h3 id="head-3-etc-passwd"><a href="#head-3-etc-passwd" class="headerlink" title="#head -3 /etc/passwd"></a>#head -3 /etc/passwd</h3><h3 id="tail-3-etc-passwd-1"><a href="#tail-3-etc-passwd-1" class="headerlink" title="#tail -3 /etc/passwd"></a>#tail -3 /etc/passwd</h3><blockquote>
-<p>如何一次性创建出/text/1/2/3/4</p>
-</blockquote>
-<h3 id="mkdir-p-text-1-2-3-4"><a href="#mkdir-p-text-1-2-3-4" class="headerlink" title="#mkdir -p /text/1/2/3/4"></a>#mkdir -p /text/1/2/3/4</h3><blockquote>
-<p>快速到当前账户的家目录</p>
-</blockquote>
-<h3 id="cd"><a href="#cd" class="headerlink" title="#cd ~"></a>#cd ~</h3><h3 id="cd-1"><a href="#cd-1" class="headerlink" title="#cd"></a>#cd</h3><blockquote>
-<p>查看/etc所占磁盘空间</p>
-</blockquote>
-<h3 id="du-sh-etc"><a href="#du-sh-etc" class="headerlink" title="#du -sh /etc"></a>#du -sh /etc</h3><blockquote>
-<p>删除/tmp下所有文件</p>
-</blockquote>
-<h3 id="rm-rf-tmp"><a href="#rm-rf-tmp" class="headerlink" title="#rm -rf /tmp/*"></a>#rm -rf /tmp/*</h3><blockquote>
-<p>尝试启动apache服务，并检查是否启动成功</p>
-</blockquote>
-<h3 id="service-httpd-start"><a href="#service-httpd-start" class="headerlink" title="#service httpd start"></a>#service httpd start</h3><h3 id="ps-ef-grep-httpd"><a href="#ps-ef-grep-httpd" class="headerlink" title="#ps -ef | grep httpd"></a>#ps -ef | grep httpd</h3><blockquote>
-<p>杀死apache进程</p>
-</blockquote>
-<h3 id="killall-httpd"><a href="#killall-httpd" class="headerlink" title="#killall httpd"></a>#killall httpd</h3>
+<p><strong>Linux通用格式</strong><br>指令主体 【选项】 【操作对象】<br>主体只有一个，选项可以多个，操作对象可以多个</p>
+<p><strong>指令</strong><br>ls(list) 当前目录下所有文件、文件夹的名称</p>
+<p>ls 路径 指定路径下的所有文件、文件夹的名称<br>相对路径：相对要有一个参照物（一般时当前目录下）<br>绝对路径：根目录开始</p>
+<p>语法：<strong>ls 选项 路径</strong><br>ls -l /root<br>ls -la /root<br>ls -lha /root<br><strong>-l : 表示详细显示</strong><br><strong>-a :  显示所有文件/文件夹，包括隐藏的</strong><br><strong>-h : 高可读性</strong></p>
+<p><img src="/2018/06/28/运维入门第一天-基本命令/运维入门第一天/2.png" alt=""><br><img src="/2018/06/28/运维入门第一天-基本命令/运维入门第一天/3.png" alt=""></p>
+<hr>
+<p>pwd  打印当前路径的绝对路径<br><img src="/2018/06/28/运维入门第一天-基本命令/运维入门第一天/4.png" alt=""></p>
+<hr>
+<p>cd 切换当前目录</p>
+<p>语法：<strong>cd 路径(绝对路径)</strong><br>cd /usr/local<br><img src="/2018/06/28/运维入门第一天-基本命令/运维入门第一天/5.png" alt=""><br>常用：cd ..  回到上级目录<br>           cd  / 回到根目录<br>           cd ~ 当前用户的home目录</p>
+<hr>
+<p>mkdir  创建目录<br>语法一：<strong>mkdir 路径</strong>（可以是绝对、相对）<br>语法二：<strong>mkdir -p 绝对路径</strong>（此语法可用来一次性创建多层不存在的目录）<br>当前目录下直接mkdir xxx文件夹，像创建非当前目录的需要mkdir /../../xxx(绝对路径)，然后可以通过ls命令来验证是否创建了这个文件夹，简单不多说。<br>注意 颜色说明（用的Xshell）：<br>白色：表示普通文件<br>蓝色：表示目录<br>绿色：表示可执行文件<br>红色：表示压缩文件<br>浅蓝色：链接文件<br>红色闪烁：表示链接的文件有问题<br>黄色：表示设备文件<br>灰色：表示其他文件</p>
+<p>touch 创建文件<br>语法：<strong>touch 绝对路径/文件名称</strong>（和mkdir类似）</p>
+<hr>
+<p>cp 复制文件/文件夹<br>语法：<strong>cd 被复制的文件的绝对路径/文件名称.后缀  被复制绝对路径</strong><br>文件夹复制时需要加选项 <strong>-r</strong>(递归复制)<br>例：<br>cd  -r ./xxxx/  /home/xxxx</p>
+<hr>
+<p>mv 移动、剪切<br>语法：<strong>mv 需要移动文档路径 需要保存的位置</strong><br>注：重命名也是mv命令</p>
+<hr>
+<p>rm 删除<br>语法：<strong>rm 选项 需要删除的文档路径</strong><br>rm -f xxx 表示取消是否删除，直接删除<br>如果想删除 整个文件夹包括其中的文件 rm -rf  xxx<br>有时候用到<em> </em>通配符 ，比如 rm -f xxx**表示删除xxx开头的文件</p>
+<hr>
+<p>vim 文本编辑<br>语法：<strong>vim 文件路径</strong><br>编辑时v进入编辑，需要保存并退出:wq  直接退出:q</p>
+<hr>
+<p>cat 直接打开一个文件、合并文件<br>语法一：<strong>cat 文件路径</strong><br>与vim的区别就是 不需要:q退出<br>语法二：<strong>cat 待合并文件路径1 待合并文件路径2 &gt;合并之后的文件路径</strong><br>注：这里的&gt;表示输出重定向，意思是只合并，不做后续操作，如果有后续操作用&gt;&gt;</p>
+<p> 明天将学习进阶命令</p>
+
       
     </div>
     
@@ -376,18 +367,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/03/运维入门第三天-进阶命令/" rel="next" title="运维入门第三天-进阶命令">
-                <i class="fa fa-chevron-left"></i> 运维入门第三天-进阶命令
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/04/上海交通大学公开课-数学之旅笔记/" rel="prev" title="上海交通大学公开课-数学之旅笔记">
-                上海交通大学公开课-数学之旅笔记 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/06/29/运维入门第二天-基本命令(2)/" rel="prev" title="运维入门第二天-基本命令(2)">
+                运维入门第二天-基本命令(2) <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -440,17 +427,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -501,22 +479,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#reboot"><span class="nav-number">1.</span> <span class="nav-text">#reboot</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快捷键-前：ctrl-u-后-ctrl-k"><span class="nav-number">2.</span> <span class="nav-text">快捷键 前：ctrl+u 后 ctrl+k</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rm-f-temp-A"><span class="nav-number">3.</span> <span class="nav-text">#rm -f /temp/A*</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cp-etc-passwd-temp"><span class="nav-number">4.</span> <span class="nav-text">#cp  /etc/passwd /temp/</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tail-3-etc-passwd"><span class="nav-number">5.</span> <span class="nav-text">#tail -3 /etc/passwd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#wc-l-etc-passwd"><span class="nav-number">6.</span> <span class="nav-text">#wc -l /etc/passwd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#touch-temp-text-conf"><span class="nav-number">7.</span> <span class="nav-text">#touch /temp/text.conf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vim-temp-text-conf"><span class="nav-number">8.</span> <span class="nav-text">#vim /temp/text.conf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#head-3-etc-passwd"><span class="nav-number">9.</span> <span class="nav-text">#head -3 /etc/passwd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tail-3-etc-passwd-1"><span class="nav-number">10.</span> <span class="nav-text">#tail -3 /etc/passwd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mkdir-p-text-1-2-3-4"><span class="nav-number">11.</span> <span class="nav-text">#mkdir -p /text/1/2/3/4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cd"><span class="nav-number">12.</span> <span class="nav-text">#cd ~</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cd-1"><span class="nav-number">13.</span> <span class="nav-text">#cd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#du-sh-etc"><span class="nav-number">14.</span> <span class="nav-text">#du -sh /etc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rm-rf-tmp"><span class="nav-number">15.</span> <span class="nav-text">#rm -rf /tmp/*</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#service-httpd-start"><span class="nav-number">16.</span> <span class="nav-text">#service httpd start</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ps-ef-grep-httpd"><span class="nav-number">17.</span> <span class="nav-text">#ps -ef | grep httpd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#killall-httpd"><span class="nav-number">18.</span> <span class="nav-text">#killall httpd</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

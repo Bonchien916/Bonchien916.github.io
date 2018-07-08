@@ -1,0 +1,46 @@
+<blockquote>
+<p>df 查看磁盘空间<br>语法：<strong>df -h</strong><br><img src="./1.png" alt="Alt text"></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>free 查看内存使用情况<br>语法：<strong>free -m</strong>(以MB为单位查看)</p>
+</blockquote>
+<p>查了下网上的资料，发现也有这样的情况</p>
+<p>解释：</p>
+<p>total：表示物理内存总量。</p>
+<p>used：表示总计分配给缓存（包含buffers 与cache ）使用的数量，但其中可能部分缓存并未实际使用。</p>
+<p>free：未被分配的内存。</p>
+<p>shared：共享内存。</p>
+<p>buffers：系统分配但未被使用的buffers数量。</p>
+<p>cached：系统分配但未被使用的cache数量。</p>
+<p>buffers/cached中的total、used、free表示如下：</p>
+<p>used：实际使用的buffers与cache总量，也是实际使用的内存总量。</p>
+<p>free：未被使用的buffers与cache和未被分配的内存之和，这就是系统当前实际可用内存。</p>
+<p>total(Mem) = used(Mem) + free(Mem)</p>
+<p>total(Mem) = used(buffers/cache) + free(buffers/cache)</p>
+<p>used(Mem)  = buffers(Mem) + cached(Mem) + used(buffers/cache)</p>
+<p>free(buffers/cache) = buffers(Mem) + cached(Mem) + free(Mem)</p>
+<hr>
+<blockquote>
+<p>head/tail 查看文件前/末 n 行（默认10行）<br>语法：<strong>head/tail -n 文件名称</strong><br><img src="./4.png" alt="Alt text"></p>
+</blockquote>
+<p>这里tail有第二种语法<br><strong>tail -f 文件路径</strong>查看文件的动态变化<br>注意：不能手动打开</p>
+<hr>
+<blockquote>
+<p>wc 统计文件内容信息<br>语法：wc -lwc 需要统计的文件内容</p>
+</blockquote>
+<p>-l：lines行数<br>-w：words单词数（依据空格来判断数量）<br>-c：bytes字节数<br><img src="./5.png" alt="Alt text"></p>
+<hr>
+<blockquote>
+<p>date 查看日期 CST表示中国<br>语法：<strong>date 选项</strong></p>
+</blockquote>
+<p>例： date +%F(等价于+%Y-%m-%d)<br><img src="./6.png" alt="Alt text"><br>还可以查看之前或者之后的时间。比如这样的语法<strong>date -d “-1 day” “+%F”</strong>,表示前一天</p>
+<blockquote>
+<p>cal 查看日历<br>语法：<strong>cal 选项</strong></p>
+</blockquote>
+<p><img src="./7.png" alt="Alt text"><br>cal -y 2018输出2018年的日历</p>
+<blockquote>
+<p><strong>（重要）管道符：|</strong>  通常用来“过滤”、”扩展”、”特殊”</p>
+</blockquote>
+<p>管道前面的输出就是管道后面的输入</p>
+<p>grep：主要用于过滤</p>

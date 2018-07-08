@@ -79,18 +79,24 @@
 
 
 
-<meta name="description" content="通过命令行重启Linux  #reboot 快速删除光标前/后的内容  快捷键 前：ctrl+u 后 ctrl+k 如何删除/temp目录下所有A开头的  #rm -f /temp/A* 备份/etc/passwd 到 /temp目录  #cp  /etc/passwd /temp/ 如何查看系统中最后创建的3个用户  用户创建信息在/etc/passwd中 #tail -3 /etc/pass">
+<meta name="description" content="df 查看磁盘空间语法：df -h    free 查看内存使用情况语法：free -m(以MB为单位查看)  查了下网上的资料，发现也有这样的情况 解释： total：表示物理内存总量。 used：表示总计分配给缓存（包含buffers 与cache ）使用的数量，但其中可能部分缓存并未实际使用。 free：未被分配的内存。 shared：共享内存。 buffers：系统分配但未被使用的buf">
 <meta name="keywords" content="运维">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux入门练习">
-<meta property="og:url" content="https://bonchien916.github.io/2018/07/04/Linux入门练习/index.html">
+<meta property="og:title" content="运维入门第二天-基本命令(2)">
+<meta property="og:url" content="https://bonchien916.github.io/2018/06/29/运维入门第二天-基本命令(2)/index.html">
 <meta property="og:site_name" content="Bonchien博客">
-<meta property="og:description" content="通过命令行重启Linux  #reboot 快速删除光标前/后的内容  快捷键 前：ctrl+u 后 ctrl+k 如何删除/temp目录下所有A开头的  #rm -f /temp/A* 备份/etc/passwd 到 /temp目录  #cp  /etc/passwd /temp/ 如何查看系统中最后创建的3个用户  用户创建信息在/etc/passwd中 #tail -3 /etc/pass">
+<meta property="og:description" content="df 查看磁盘空间语法：df -h    free 查看内存使用情况语法：free -m(以MB为单位查看)  查了下网上的资料，发现也有这样的情况 解释： total：表示物理内存总量。 used：表示总计分配给缓存（包含buffers 与cache ）使用的数量，但其中可能部分缓存并未实际使用。 free：未被分配的内存。 shared：共享内存。 buffers：系统分配但未被使用的buf">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-04T01:03:12.889Z">
+<meta property="og:image" content="https://bonchien916.github.io/2018/06/29/运维入门第二天-基本命令(2)/运维入门第二天/1.png">
+<meta property="og:image" content="https://bonchien916.github.io/2018/06/29/运维入门第二天-基本命令(2)/运维入门第二天/4.png">
+<meta property="og:image" content="https://bonchien916.github.io/2018/06/29/运维入门第二天-基本命令(2)/运维入门第二天/5.png">
+<meta property="og:image" content="https://bonchien916.github.io/2018/06/29/运维入门第二天-基本命令(2)/运维入门第二天/6.png">
+<meta property="og:image" content="https://bonchien916.github.io/2018/06/29/运维入门第二天-基本命令(2)/运维入门第二天/7.png">
+<meta property="og:updated_time" content="2018-07-08T13:40:10.694Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux入门练习">
-<meta name="twitter:description" content="通过命令行重启Linux  #reboot 快速删除光标前/后的内容  快捷键 前：ctrl+u 后 ctrl+k 如何删除/temp目录下所有A开头的  #rm -f /temp/A* 备份/etc/passwd 到 /temp目录  #cp  /etc/passwd /temp/ 如何查看系统中最后创建的3个用户  用户创建信息在/etc/passwd中 #tail -3 /etc/pass">
+<meta name="twitter:title" content="运维入门第二天-基本命令(2)">
+<meta name="twitter:description" content="df 查看磁盘空间语法：df -h    free 查看内存使用情况语法：free -m(以MB为单位查看)  查了下网上的资料，发现也有这样的情况 解释： total：表示物理内存总量。 used：表示总计分配给缓存（包含buffers 与cache ）使用的数量，但其中可能部分缓存并未实际使用。 free：未被分配的内存。 shared：共享内存。 buffers：系统分配但未被使用的buf">
+<meta name="twitter:image" content="https://bonchien916.github.io/2018/06/29/运维入门第二天-基本命令(2)/运维入门第二天/1.png">
 
 
 
@@ -120,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="https://bonchien916.github.io/2018/07/04/Linux入门练习/"/>
+  <link rel="canonical" href="https://bonchien916.github.io/2018/06/29/运维入门第二天-基本命令(2)/"/>
 
 
 
 
 
-  <title>Linux入门练习 | Bonchien博客</title>
+  <title>运维入门第二天-基本命令(2) | Bonchien博客</title>
   
 
 
@@ -233,7 +239,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://bonchien916.github.io/2018/07/04/Linux入门练习/">
+    <link itemprop="mainEntityOfPage" href="https://bonchien916.github.io/2018/06/29/运维入门第二天-基本命令(2)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Bonchien">
@@ -250,7 +256,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Linux入门练习</h1>
+          <h1 class="post-title" itemprop="name headline">运维入门第二天-基本命令(2)</h1>
         
 
         <div class="post-meta">
@@ -262,8 +268,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-04T09:02:44+08:00">
-                2018-07-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-29T16:29:37+08:00">
+                2018-06-29
               </time>
             
 
@@ -301,52 +307,52 @@
 
       
         <blockquote>
-<p>通过命令行重启Linux</p>
+<p>df 查看磁盘空间<br>语法：<strong>df -h</strong><br><img src="/2018/06/29/运维入门第二天-基本命令(2)/运维入门第二天/1.png" alt=""></p>
 </blockquote>
-<h3 id="reboot"><a href="#reboot" class="headerlink" title="#reboot"></a>#reboot</h3><blockquote>
-<p>快速删除光标前/后的内容</p>
+<hr>
+<blockquote>
+<p>free 查看内存使用情况<br>语法：<strong>free -m</strong>(以MB为单位查看)</p>
 </blockquote>
-<h3 id="快捷键-前：ctrl-u-后-ctrl-k"><a href="#快捷键-前：ctrl-u-后-ctrl-k" class="headerlink" title="快捷键 前：ctrl+u 后 ctrl+k"></a>快捷键 前：ctrl+u 后 ctrl+k</h3><blockquote>
-<p>如何删除/temp目录下所有A开头的</p>
+<p>查了下网上的资料，发现也有这样的情况</p>
+<p>解释：</p>
+<p>total：表示物理内存总量。</p>
+<p>used：表示总计分配给缓存（包含buffers 与cache ）使用的数量，但其中可能部分缓存并未实际使用。</p>
+<p>free：未被分配的内存。</p>
+<p>shared：共享内存。</p>
+<p>buffers：系统分配但未被使用的buffers数量。</p>
+<p>cached：系统分配但未被使用的cache数量。</p>
+<p>buffers/cached中的total、used、free表示如下：</p>
+<p>used：实际使用的buffers与cache总量，也是实际使用的内存总量。</p>
+<p>free：未被使用的buffers与cache和未被分配的内存之和，这就是系统当前实际可用内存。</p>
+<p>total(Mem) = used(Mem) + free(Mem)</p>
+<p>total(Mem) = used(buffers/cache) + free(buffers/cache)</p>
+<p>used(Mem)  = buffers(Mem) + cached(Mem) + used(buffers/cache)</p>
+<p>free(buffers/cache) = buffers(Mem) + cached(Mem) + free(Mem)</p>
+<hr>
+<blockquote>
+<p>head/tail 查看文件前/末 n 行（默认10行）<br>语法：<strong>head/tail -n 文件名称</strong><br><img src="/2018/06/29/运维入门第二天-基本命令(2)/运维入门第二天/4.png" alt=""></p>
 </blockquote>
-<h3 id="rm-f-temp-A"><a href="#rm-f-temp-A" class="headerlink" title="#rm -f /temp/A*"></a>#rm -f /temp/A*</h3><blockquote>
-<p>备份/etc/passwd 到 /temp目录</p>
+<p>这里tail有第二种语法<br><strong>tail -f 文件路径</strong>查看文件的动态变化<br>注意：不能手动打开</p>
+<hr>
+<blockquote>
+<p>wc 统计文件内容信息<br>语法：wc -lwc 需要统计的文件内容</p>
 </blockquote>
-<h3 id="cp-etc-passwd-temp"><a href="#cp-etc-passwd-temp" class="headerlink" title="#cp  /etc/passwd /temp/"></a>#cp  /etc/passwd /temp/</h3><blockquote>
-<p>如何查看系统中最后创建的3个用户</p>
+<p>-l：lines行数<br>-w：words单词数（依据空格来判断数量）<br>-c：bytes字节数<br><img src="/2018/06/29/运维入门第二天-基本命令(2)/运维入门第二天/5.png" alt=""></p>
+<hr>
+<blockquote>
+<p>date 查看日期 CST表示中国<br>语法：<strong>date 选项</strong></p>
 </blockquote>
-<p>用户创建信息在/etc/passwd中</p>
-<h3 id="tail-3-etc-passwd"><a href="#tail-3-etc-passwd" class="headerlink" title="#tail -3 /etc/passwd"></a>#tail -3 /etc/passwd</h3><blockquote>
-<p>统计当前有多少用户</p>
+<p>例： date +%F(等价于+%Y-%m-%d)<br><img src="/2018/06/29/运维入门第二天-基本命令(2)/运维入门第二天/6.png" alt=""><br>还可以查看之前或者之后的时间。比如这样的语法<strong>date -d “-1 day” “+%F”</strong>,表示前一天</p>
+<blockquote>
+<p>cal 查看日历<br>语法：<strong>cal 选项</strong></p>
 </blockquote>
-<h3 id="wc-l-etc-passwd"><a href="#wc-l-etc-passwd" class="headerlink" title="#wc -l /etc/passwd"></a>#wc -l /etc/passwd</h3><blockquote>
-<p>如何创建/temp/text.conf文件</p>
+<p><img src="/2018/06/29/运维入门第二天-基本命令(2)/运维入门第二天/7.png" alt=""><br>cal -y 2018输出2018年的日历</p>
+<blockquote>
+<p><strong>（重要）管道符：|</strong>  通常用来“过滤”、”扩展”、”特殊”</p>
 </blockquote>
-<h3 id="touch-temp-text-conf"><a href="#touch-temp-text-conf" class="headerlink" title="#touch /temp/text.conf"></a>#touch /temp/text.conf</h3><blockquote>
-<p>通过vim打开/temp/text.conf</p>
-</blockquote>
-<h3 id="vim-temp-text-conf"><a href="#vim-temp-text-conf" class="headerlink" title="#vim /temp/text.conf"></a>#vim /temp/text.conf</h3><blockquote>
-<p>如何查看/etc/passwd的头三行和尾三行</p>
-</blockquote>
-<h3 id="head-3-etc-passwd"><a href="#head-3-etc-passwd" class="headerlink" title="#head -3 /etc/passwd"></a>#head -3 /etc/passwd</h3><h3 id="tail-3-etc-passwd-1"><a href="#tail-3-etc-passwd-1" class="headerlink" title="#tail -3 /etc/passwd"></a>#tail -3 /etc/passwd</h3><blockquote>
-<p>如何一次性创建出/text/1/2/3/4</p>
-</blockquote>
-<h3 id="mkdir-p-text-1-2-3-4"><a href="#mkdir-p-text-1-2-3-4" class="headerlink" title="#mkdir -p /text/1/2/3/4"></a>#mkdir -p /text/1/2/3/4</h3><blockquote>
-<p>快速到当前账户的家目录</p>
-</blockquote>
-<h3 id="cd"><a href="#cd" class="headerlink" title="#cd ~"></a>#cd ~</h3><h3 id="cd-1"><a href="#cd-1" class="headerlink" title="#cd"></a>#cd</h3><blockquote>
-<p>查看/etc所占磁盘空间</p>
-</blockquote>
-<h3 id="du-sh-etc"><a href="#du-sh-etc" class="headerlink" title="#du -sh /etc"></a>#du -sh /etc</h3><blockquote>
-<p>删除/tmp下所有文件</p>
-</blockquote>
-<h3 id="rm-rf-tmp"><a href="#rm-rf-tmp" class="headerlink" title="#rm -rf /tmp/*"></a>#rm -rf /tmp/*</h3><blockquote>
-<p>尝试启动apache服务，并检查是否启动成功</p>
-</blockquote>
-<h3 id="service-httpd-start"><a href="#service-httpd-start" class="headerlink" title="#service httpd start"></a>#service httpd start</h3><h3 id="ps-ef-grep-httpd"><a href="#ps-ef-grep-httpd" class="headerlink" title="#ps -ef | grep httpd"></a>#ps -ef | grep httpd</h3><blockquote>
-<p>杀死apache进程</p>
-</blockquote>
-<h3 id="killall-httpd"><a href="#killall-httpd" class="headerlink" title="#killall httpd"></a>#killall httpd</h3>
+<p>管道前面的输出就是管道后面的输入</p>
+<p>grep：主要用于过滤</p>
+
       
     </div>
     
@@ -376,8 +382,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/03/运维入门第三天-进阶命令/" rel="next" title="运维入门第三天-进阶命令">
-                <i class="fa fa-chevron-left"></i> 运维入门第三天-进阶命令
+              <a href="/2018/06/28/运维入门第一天-基本命令/" rel="next" title="运维入门第一天-基本命令">
+                <i class="fa fa-chevron-left"></i> 运维入门第一天-基本命令
               </a>
             
           </div>
@@ -386,8 +392,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/04/上海交通大学公开课-数学之旅笔记/" rel="prev" title="上海交通大学公开课-数学之旅笔记">
-                上海交通大学公开课-数学之旅笔记 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/07/03/运维入门第三天-进阶命令/" rel="prev" title="运维入门第三天-进阶命令">
+                运维入门第三天-进阶命令 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -440,17 +446,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -501,22 +498,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#reboot"><span class="nav-number">1.</span> <span class="nav-text">#reboot</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#快捷键-前：ctrl-u-后-ctrl-k"><span class="nav-number">2.</span> <span class="nav-text">快捷键 前：ctrl+u 后 ctrl+k</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rm-f-temp-A"><span class="nav-number">3.</span> <span class="nav-text">#rm -f /temp/A*</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cp-etc-passwd-temp"><span class="nav-number">4.</span> <span class="nav-text">#cp  /etc/passwd /temp/</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tail-3-etc-passwd"><span class="nav-number">5.</span> <span class="nav-text">#tail -3 /etc/passwd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#wc-l-etc-passwd"><span class="nav-number">6.</span> <span class="nav-text">#wc -l /etc/passwd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#touch-temp-text-conf"><span class="nav-number">7.</span> <span class="nav-text">#touch /temp/text.conf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vim-temp-text-conf"><span class="nav-number">8.</span> <span class="nav-text">#vim /temp/text.conf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#head-3-etc-passwd"><span class="nav-number">9.</span> <span class="nav-text">#head -3 /etc/passwd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tail-3-etc-passwd-1"><span class="nav-number">10.</span> <span class="nav-text">#tail -3 /etc/passwd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mkdir-p-text-1-2-3-4"><span class="nav-number">11.</span> <span class="nav-text">#mkdir -p /text/1/2/3/4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cd"><span class="nav-number">12.</span> <span class="nav-text">#cd ~</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cd-1"><span class="nav-number">13.</span> <span class="nav-text">#cd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#du-sh-etc"><span class="nav-number">14.</span> <span class="nav-text">#du -sh /etc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rm-rf-tmp"><span class="nav-number">15.</span> <span class="nav-text">#rm -rf /tmp/*</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#service-httpd-start"><span class="nav-number">16.</span> <span class="nav-text">#service httpd start</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ps-ef-grep-httpd"><span class="nav-number">17.</span> <span class="nav-text">#ps -ef | grep httpd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#killall-httpd"><span class="nav-number">18.</span> <span class="nav-text">#killall httpd</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
